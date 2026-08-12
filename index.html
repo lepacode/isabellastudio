@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/normalize.css?v3">
-    <link rel="stylesheet" href="css/index.css?v3">
+    <link rel="stylesheet" href="css/normalize.css?v4">
+    <link rel="stylesheet" href="css/index.css?v4">
     <title>Isabella Studio</title>
 </head>
 
@@ -140,6 +140,141 @@
 
 
 
+        <section class="testimonios" id="testimonios">
+            <div class="testimonios__container">
+                <h2>TESTIMONIOS</h2>
+                <div class="testimonios__grid">
+
+                    <article class="testimonio testimonio--fuchsia">
+                        <p class="testimonio__event">Carla y Martín — boda en Estancia La Aurora</p>
+                        <div class="testimonio__stars" aria-label="5 estrellas">★★★★★</div>
+                        <blockquote class="testimonio__text">"Nos casamos en febrero y Florencia y José hicieron todo:
+                            la ambientación, el alquiler del mobiliario y hasta la portería. Ni un solo detalle
+                            quedó al azar. La decoración era exactamente el sueño que teníamos en las fotos de
+                            referencia. Ella entendió la estética al toque y él coordinó cada proveedor
+                            sin que nos enteráramos de un solo problema."</blockquote>
+                    </article>
+
+                    <article class="testimonio testimonio--lime">
+                        <p class="testimonio__event">Sofía Rodríguez — aniversario de empresa</p>
+                        <div class="testimonio__stars" aria-label="5 estrellas">★★★★★</div>
+                        <blockquote class="testimonio__text">"Contratamos la organización integral del aniversario
+                            de la empresa: planificación, fotografía y el sistema de fotos en vivo. Fue un antes y
+                            un después para el evento. Los invitados se sacaban fotos, se imprimían al instante y
+                            volvían a la pista. Florencia y José supervisaron todo de principio a fin; nosotros
+                            solo disfrutamos."</blockquote>
+                    </article>
+
+                    <article class="testimonio testimonio--violet">
+                        <p class="testimonio__event">Gabriela Pérez — cumpleaños de 15</p>
+                        <div class="testimonio__stars" aria-label="5 estrellas">★★★★★</div>
+                        <blockquote class="testimonio__text">"Florencia se encargó de la decoración del cumpleaños
+                            de mi hija y superó todo lo que imaginaba. Es obsesiva con el detalle, en el buen
+                            sentido: las flores, la mesa dulce, la ambientación de luces... Cada rincón parecía
+                            sacado de una revista. Mi hija lloró de la emoción al entrar."</blockquote>
+                    </article>
+
+                    <article class="testimonio testimonio--orange">
+                        <p class="testimonio__event">Ricardo y Elena — aniversario de bodas</p>
+                        <div class="testimonio__stars" aria-label="5 estrellas">★★★★★</div>
+                        <blockquote class="testimonio__text">"Hicimos una cena íntima por nuestros 25 años y José
+                            se ocupó de la planificación y el seguimiento. Siempre estaba un paso adelante: llamaba,
+                            confirmaba, controlaba los tiempos. Nos dio seguridad total, y el día del evento todo
+                            funcionó a la perfección, desde la recepción hasta el último postre."</blockquote>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="ubicacion" id="ubicacion">
+            <div class="ubicacion__container">
+                <h2>UBICACIÓN</h2>
+                <div class="ubicacion__map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.5738676926267!2d-65.2286271!3d-26.821693999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c5c8dd8ed6f%3A0x3a446889d2dbcacb!2sIsabella%20Eventos!5e0!3m2!1ses-419!2sar!4v1786578048782!5m2!1ses-419!2sar"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+                <div class="ubicacion__actions">
+                    <a href="https://maps.app.goo.gl/dSV4pnx2fwrGw9dx7" target="_blank" rel="noopener"
+                        class="btn btn--primary">Ver Ubicación</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="contacto" id="contacto">
+            <div class="contacto__container">
+                <h2>CONTACTOS</h2>
+                <p class="contacto__subtitulo">Enviamos tu consulta, te responderemos a la brevedad</p>
+
+                <div class="contacto__grid">
+
+                    <form class="contacto__form" id="contactoForm">
+                        <label class="contacto__label" for="contactoNombre">Tu nombre</label>
+                        <input class="contacto__input" type="text" id="contactoNombre" name="nombre"
+                            placeholder="Escribí tu nombre" required>
+
+                        <label class="contacto__label" for="contactoMensaje">Mensaje</label>
+                        <textarea class="contacto__textarea" id="contactoMensaje" name="mensaje"
+                            placeholder="Contanos sobre tu evento..." rows="6" required></textarea>
+
+                        <div class="contacto__buttons">
+                            <a class="btn contacto__wa contacto__wa--florencia" href="#" data-numero="543816421540"
+                                data-nombre="Florencia">Enviar a Florencia</a>
+                            <a class="btn contacto__wa contacto__wa--jose" href="#" data-numero="543815640382"
+                                data-nombre="José">Enviar a José</a>
+                        </div>
+                    </form>
+
+                    <aside class="contacto__info">
+                        <div class="contacto__item">
+                            <svg class="contacto__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <p class="contacto__texto">Don Bosco 2106, San Miguel de Tucumán, Tucumán</p>
+                        </div>
+
+                        <div class="contacto__item">
+                            <svg class="contacto__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                            <a class="contacto__link"
+                                href="https://www.facebook.com/p/Isabella-Eventos-100063769830973/" target="_blank"
+                                rel="noopener">Facebook</a>
+                        </div>
+
+                        <div class="contacto__item">
+                            <svg class="contacto__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5"></rect>
+                                <path d="M16 11.37a4 4 0 1 1-7.91 1.13 4 4 0 0 1 7.91-1.13z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                            <a class="contacto__link"
+                                href="https://www.instagram.com/isabellaeventos_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                                target="_blank" rel="noopener">Instagram</a>
+                        </div>
+
+                        <div class="contacto__item">
+                            <svg class="contacto__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <p class="contacto__texto">Lunes a Viernes de 18:30 a 21:00</p>
+                        </div>
+                    </aside>
+
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <div class="lightbox" id="lightbox" aria-hidden="true">
@@ -153,7 +288,53 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <script src="js/index.js?v3"></script>
+    <script src="js/index.js?v4"></script>
+
+    <footer class="footer">
+        <div class="footer__grid">
+            <div class="footer__brand">
+                <a href="#" class="footer__logo"><img src="assets/vectores/logo.svg" alt="Isabella Studio"></a>
+                <p class="footer__tagline">Decoración, ambientación y organización de eventos</p>
+            </div>
+
+            <nav class="footer__nav" aria-label="Navegación del pie">
+                <ul>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#testimonios">Testimonios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer__contacto">
+                <p class="footer__direccion">Don Bosco 2106, San Miguel de Tucumán, Tucumán</p>
+                <p class="footer__horario">Lunes a Viernes de 18:30 a 21:00</p>
+                <div class="footer__social">
+                    <a href="https://www.facebook.com/p/Isabella-Eventos-100063769830973/" target="_blank"
+                        rel="noopener" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/isabellaeventos_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                        target="_blank" rel="noopener" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5"></rect>
+                            <path d="M16 11.37a4 4 0 1 1-7.91 1.13 4 4 0 0 1 7.91-1.13z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bar">
+            <p>© 2026 Isabella Studio — Todos los derechos reservados</p>
+        </div>
+    </footer>
 
 </body>
 

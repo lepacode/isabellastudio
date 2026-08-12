@@ -87,6 +87,22 @@ document.querySelector('.btn--primary').addEventListener('click', e => {
     document.getElementById('nosotros').scrollIntoView({ behavior: 'smooth' });
 });
 
+/* ---- whatsapp ---- */
+
+document.querySelectorAll('.contacto__wa').forEach(btn => {
+    btn.addEventListener('click', e => {
+        e.preventDefault();
+        const nombre = document.getElementById('contactoNombre').value.trim();
+        const mensaje = document.getElementById('contactoMensaje').value.trim();
+        const destino = btn.dataset.nombre;
+        const texto = `Hola ${destino}, soy ${nombre}.\n${mensaje}`;
+        window.open(`https://wa.me/${btn.dataset.numero}?text=${encodeURIComponent(texto)}`, '_blank');
+        document.getElementById('contactoNombre').value = '';
+        document.getElementById('contactoMensaje').value = '';
+        document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' });
+    });
+});
+
 document.querySelectorAll('.header__nav a').forEach(link => {
     link.addEventListener('click', e => {
         const target = document.querySelector(link.getAttribute('href'));
