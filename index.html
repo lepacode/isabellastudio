@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/normalize.css?v3">
+    <link rel="stylesheet" href="css/index.css?v3">
+    <title>Isabella Studio</title>
+</head>
+
+<body>
+
+    <div class="light light--violet" id="lightViolet"></div>
+    <div class="light light--lime" id="lightLime"></div>
+
+    <header class="header" id="header">
+        <div class="header__loader" id="loader">
+            <div class="header__spinner"></div>
+        </div>
+        <div class="header__slideshow">
+            <div class="header__slide active" style="background-image: url('assets/imagenes/header/fondo1.webp');">
+            </div>
+            <div class="header__slide" style="background-image: url('assets/imagenes/header/fondo2.webp');"></div>
+            <div class="header__slide" style="background-image: url('assets/imagenes/header/fondo3.webp');"></div>
+            <div class="header__slide" style="background-image: url('assets/imagenes/header/fondo4.webp');"></div>
+        </div>
+        <div class="header__top">
+            <a href="#" class="header__logo">
+                <img src="assets/vectores/logo.svg" alt="Isabella Studio">
+            </a>
+            <button class="header__hamburger" id="hamburger" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <nav class="header__nav" id="nav">
+            <button class="header__nav-close" id="navClose" aria-label="Cerrar menú">&times;</button>
+            <ul>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#ubicacion">Ubicación</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="header__slogan">
+            <div class="header__slogan-text">
+                <h1>DISEÑAMOS EXPERIENCIAS</h1>
+                <p>CREAMOS RECUERDOS</p>
+            </div>
+            <div class="header__buttons">
+                <a href="#" class="btn btn--primary">Conocer más</a>
+            </div>
+        </div>
+        <a href="#" class="header__arrow" aria-label="Desplazar hacia abajo">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </a>
+    </header>
+
+    <main>
+
+        <section class="nosotros" id="nosotros">
+            <div class="nosotros__container">
+                <h2>SOBRE NOSOTROS</h2>
+                <p>Somos <strong>Florencia y José</strong>, y juntos formamos una empresa dedicada
+                    a la <strong>decoración, ambientación, planificación y organización de
+                        eventos</strong>. Contamos con más de 10 años de experiencia en el rubro,
+                    poniendo nuestra trayectoria y pasión al servicio de cada celebración.</p>
+                <p>Ofrecemos <strong>alquiler de mobiliario, decoración integral y organización de
+                        eventos</strong> de principio a fin, cuidando cada detalle para hacer de
+                    cada ocasión un momento especial.</p>
+                <p>Nuestra misión es hacer realidad cada idea, transformar espacios y crear
+                    <strong>experiencias inolvidables</strong>.
+                </p>
+            </div>
+        </section>
+
+        <section class="servicios" id="servicios">
+            <div class="servicios__container">
+                <h2>NUESTROS SERVICIOS</h2>
+                <p>Ofrecemos un servicio integral para acompañarte en cada etapa de tu evento:</p>
+                <ul>
+                    <li>Decoración y ambientación</li>
+                    <li>Organización integral de eventos</li>
+                    <li>Planificación y coordinación</li>
+                    <li>Seguimiento y supervisión</li>
+                    <li>Alquiler de mobiliario</li>
+                </ul>
+                <p>Nos ocupamos de cada detalle para que vos solo tengas que
+                    <strong>disfrutar</strong> de tu evento.
+                </p>
+            </div>
+        </section>
+
+        <section class="fotos" id="galeria">
+            <h3 class=" fotos__title" data-aos="fade-up">Galería de fotos</h3>
+
+
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <img src="assets/imagenes/fotos/uno.webp" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/imagenes/fotos/dos.webp" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/imagenes/fotos/tres.webp" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/imagenes/fotos/cuatro.webp" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/imagenes/fotos/cinco.webp" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/imagenes/fotos/seis.webp" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/imagenes/fotos/siete.webp" />
+                    </div>
+
+
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+
+
+
+    </main>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox__close" id="lightboxClose" aria-label="Cerrar">&times;</button>
+        <button class="lightbox__arrow lightbox__arrow--prev" id="lightboxPrev" aria-label="Anterior">&#8249;</button>
+        <figure class="lightbox__figure">
+            <img id="lightboxImg" src="" alt="">
+        </figure>
+        <button class="lightbox__arrow lightbox__arrow--next" id="lightboxNext" aria-label="Siguiente">&#8250;</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="js/index.js?v3"></script>
+
+</body>
+
+</html>
