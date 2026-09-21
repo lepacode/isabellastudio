@@ -215,6 +215,129 @@ document.addEventListener('keydown', e => {
     if (e.key === 'ArrowRight') stepLightbox(1);
 });
 
+
+
+/* ============================= */
+/* GALERÍA DE FOTOS - JS         */
+/* Vanilla JS, sin dependencias  */
+/* ============================= */
+
+(function () {
+    'use strict';
+
+    var galItems = Array.prototype.slice.call(document.querySelectorAll('.gal__item'));
+    var galLightbox = document.getElementById('gal_lightbox');
+    var galLightboxImg = document.getElementById('gal_lightbox_img');
+    var galLightboxCounter = document.getElementById('gal_lightbox_counter');
+    var galBtnClose = document.getElementById('gal_btn_close');
+    var galBtnPrev = document.getElementById('gal_btn_prev');
+    var galBtnNext = document.getElementById('gal_btn_next');
+    var galOverlay = document.getElementById('gal_lightbox_overlay');
+
+    var galImages = galItems.map(function (item) {
+        var img = item.querySelector('.gal__img');
+        return { src: img.getAttribute('src'), alt: img.getAttribute('alt') };
+    });
+
+    var galCurrentIndex = 0;
+    var galTouchStartX = 0;
+    var galTouchEndX = 0;
+    var GAL_SWIPE_THRESHOLD = 50; // px mínimos para considerar swipe
+
+    function galOpenLightbox(index) {
+        galCurrentIndex = index;
+        galUpdateLightboxImage();
+        galLightbox.classList.add('gal__lightbox--open');
+        galLightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        galBtnClose.focus();
+    }
+
+    function galCloseLightbox() {
+        galLightbox.classList.remove('gal__lightbox--open');
+        galLightbox.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+
+    function galShowPrev() {
+        galCurrentIndex = (galCurrentIndex - 1 + galImages.length) % galImages.length;
+        galUpdateLightboxImage();
+    }
+
+    function galShowNext() {
+        galCurrentIndex = (galCurrentIndex + 1) % galImages.length;
+        galUpdateLightboxImage();
+    }
+
+    function galUpdateLightboxImage() {
+        var current = galImages[galCurrentIndex];
+        galLightboxImg.setAttribute('src', current.src);
+        galLightboxImg.setAttribute('alt', current.alt);
+        galLightboxCounter.textContent = (galCurrentIndex + 1) + ' / ' + galImages.length;
+    }
+
+    // Abrir lightbox al hacer click en cada item
+    galItems.forEach(function (item, index) {
+        item.addEventListener('click', function () {
+            galOpenLightbox(index);
+        });
+    });
+
+    // Botones de control
+    galBtnClose.addEventListener('click', galCloseLightbox);
+    galBtnPrev.addEventListener('click', galShowPrev);
+    galBtnNext.addEventListener('click', galShowNext);
+    galOverlay.addEventListener('click', galCloseLightbox);
+
+    // Navegación con teclado
+    document.addEventListener('keydown', function (e) {
+        if (!galLightbox.classList.contains('gal__lightbox--open')) return;
+
+        switch (e.key) {
+            case 'Escape':
+                galCloseLightbox();
+                break;
+            case 'ArrowLeft':
+                galShowPrev();
+                break;
+            case 'ArrowRight':
+                galShowNext();
+                break;
+        }
+    });
+
+    // Soporte táctil (swipe) para móviles
+    var galLightboxContent = document.querySelector('.gal__lightbox-content');
+
+    galLightboxContent.addEventListener('touchstart', function (e) {
+        galTouchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    galLightboxContent.addEventListener('touchend', function (e) {
+        galTouchEndX = e.changedTouches[0].screenX;
+        galHandleSwipe();
+    }, { passive: true });
+
+    function galHandleSwipe() {
+        var diff = galTouchEndX - galTouchStartX;
+
+        if (Math.abs(diff) < GAL_SWIPE_THRESHOLD) return; // movimiento insuficiente
+
+        if (diff > 0) {
+            // Swipe hacia la derecha -> foto anterior
+            galShowPrev();
+        } else {
+            // Swipe hacia la izquierda -> foto siguiente
+            galShowNext();
+        }
+    }
+
+})();
+
+
+
+
+
 // ------------------- fotos ----------------------
 
 var swiper = new Swiper(".mySwiper", {

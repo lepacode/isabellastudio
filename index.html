@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/normalize.css?v5">
-    <link rel="stylesheet" href="css/index.css?v5">
+    <link rel="stylesheet" href="css/normalize.css?v6">
+    <link rel="stylesheet" href="css/index.css?v6">
     <title>Isabella Studio</title>
 </head>
 
@@ -102,8 +102,111 @@
             </div>
         </section>
 
+        <!-- ============================= -->
+        <!-- GALERÍA DE FOTOS - HTML       -->
+        <!-- ============================= -->
+        <section class="gal__container" id="gal_section">
+            <h4 class="gal__title">Gabriela de fotos</h4>
+            <div class="gal__grid" id="gal_grid">
+                <button class="gal__item" data-index="0" type="button">
+                    <img class="gal__img" src="assets/imagenes/gal/foto1.webp" alt="Foto de la charla 1" loading="lazy">
+                </button>
+                <button class="gal__item" data-index="1" type="button">
+                    <img class="gal__img" src="assets/imagenes/gal/foto2.webp" alt="Foto de la charla 2" loading="lazy">
+                </button>
+                <button class="gal__item" data-index="2" type="button">
+                    <img class="gal__img" src="assets/imagenes/gal/foto3.webp" alt="Foto de la charla 3" loading="lazy">
+                </button>
+                <button class="gal__item" data-index="3" type="button">
+                    <img class="gal__img" src="assets/imagenes/gal/foto4.webp" alt="Foto de la charla 4" loading="lazy">
+                </button>
+                <button class="gal__item" data-index="4" type="button">
+                    <img class="gal__img" src="assets/imagenes/gal/foto5.webp" alt="Foto de la charla 5" loading="lazy">
+                </button>
+                <button class="gal__item" data-index="5" type="button">
+                    <img class="gal__img" src="assets/imagenes/gal/foto6.webp" alt="Foto de la charla 6" loading="lazy">
+                </button>
+                <button class="gal__item" data-index="6" type="button">
+                    <img class="gal__img" src="assets/imagenes/gal/foto7.webp" alt="Foto de la charla 7" loading="lazy">
+                </button>
+                <button class="gal__item" data-index="7" type="button">
+                    <img class="gal__img" src="assets/imagenes/gal/foto8.webp" alt="Foto de la charla 8" loading="lazy">
+                </button>
+                <button class="gal__item" data-index="8" type="button">
+                    <img class="gal__img" src="assets/imagenes/gal/foto9.webp" alt="Foto de la charla 9" loading="lazy">
+                </button>
+                <button class="gal__item" data-index="9" type="button">
+                    <img class="gal__img" src="assets/imagenes/gal/foto10.webp" alt="Foto de la charla 10"
+                        loading="lazy">
+                </button>
+                <button class="gal__item" data-index="10" type="button">
+                    <img class="gal__img" src="assets/imagenes/gal/foto11.webp" alt="Foto de la charla 11"
+                        loading="lazy">
+                </button>
+                <button class="gal__item" data-index="11" type="button">
+                    <img class="gal__img" src="assets/imagenes/gal/foto12.webp" alt="Foto de la charla 12"
+                        loading="lazy">
+                </button>
+                <button class="gal__item" data-index="12" type="button">
+                    <img class="gal__img" src="assets/imagenes/gal/foto13.webp" alt="Foto de la charla 13"
+                        loading="lazy">
+                </button>
+                <button class="gal__item" data-index="13" type="button">
+                    <img class="gal__img" src="assets/imagenes/gal/foto14.webp" alt="Foto de la charla 14"
+                        loading="lazy">
+                </button>
+                <button class="gal__item" data-index="14" type="button">
+                    <img class="gal__img" src="assets/imagenes/gal/foto15.webp" alt="Foto de la charla 15"
+                        loading="lazy">
+                </button>
+                <button class="gal__item" data-index="15" type="button">
+                    <img class="gal__img" src="assets/imagenes/gal/foto16.webp" alt="Foto de la charla 16"
+                        loading="lazy">
+                </button>
+                <button class="gal__item" data-index="16" type="button">
+                    <img class="gal__img" src="assets/imagenes/gal/foto17.webp" alt="Foto de la charla 17"
+                        loading="lazy">
+                </button>
+                <button class="gal__item" data-index="17" type="button">
+                    <img class="gal__img" src="assets/imagenes/gal/foto18.webp" alt="Foto de la charla 18"
+                        loading="lazy">
+                </button>
+                <button class="gal__item" data-index="18" type="button">
+                    <img class="gal__img" src="assets/imagenes/gal/foto19.webp" alt="Foto de la charla 19"
+                        loading="lazy">
+                </button>
+                <button class="gal__item" data-index="19" type="button">
+                    <img class="gal__img" src="assets/imagenes/gal/foto20.webp" alt="Foto de la charla 20"
+                        loading="lazy">
+                </button>
+
+            </div>
+
+            <!-- LIGHTBOX -->
+            <div class="gal__lightbox" id="gal_lightbox" aria-hidden="true">
+                <div class="gal__lightbox-overlay" id="gal_lightbox_overlay"></div>
+
+                <button class="gal__btn gal__btn-close" id="gal_btn_close" type="button" aria-label="Cerrar galería">
+                    &times;
+                </button>
+
+                <button class="gal__btn gal__btn-prev" id="gal_btn_prev" type="button" aria-label="Foto anterior">
+                    &#8249;
+                </button>
+
+                <div class="gal__lightbox-content">
+                    <img class="gal__lightbox-img" id="gal_lightbox_img" src="" alt="">
+                    <p class="gal__lightbox-counter" id="gal_lightbox_counter"></p>
+                </div>
+
+                <button class="gal__btn gal__btn-next" id="gal_btn_next" type="button" aria-label="Foto siguiente">
+                    &#8250;
+                </button>
+            </div>
+        </section>
+
         <section class="fotos" id="galeria">
-            <h3 class=" fotos__title" data-aos="fade-up">Galería de fotos</h3>
+            <h3 class="fotos__title" data-aos="fade-up">Más fotos</h3>
 
 
             <div class="swiper mySwiper">
@@ -146,7 +249,7 @@
                 <div class="testimonios__grid">
 
                     <article class="testimonio testimonio--fuchsia">
-                        <p class="testimonio__event">Carla y Martín — boda en Estancia La Aurora</p>
+                        <p class="testimonio__event">Carla y Martín — boda</p>
                         <div class="testimonio__stars" aria-label="5 estrellas">★★★★★</div>
                         <blockquote class="testimonio__text">"Nos casamos en febrero y Florencia y José hicieron todo:
                             la ambientación, el alquiler del mobiliario y hasta la portería. Ni un solo detalle
@@ -288,7 +391,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <script src="js/index.js?v5"></script>
+    <script src="js/index.js?v6"></script>
 
     <footer class="footer">
         <div class="footer__grid">
